@@ -41,7 +41,7 @@ public:
         newNode->next = head;
         head = newNode;
     }
-
+ 
     // Insert a new node at the end of the list
     void insertEnd(int value) {
         Node* newNode = new Node(value);

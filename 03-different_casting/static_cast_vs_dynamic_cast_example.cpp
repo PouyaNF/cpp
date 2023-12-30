@@ -72,7 +72,6 @@ int main()
     std::cout<<static_cast<D*>(ptr)->b<<"\n"; // no error but wrong usage of static_cast since A and B are not the same type
 
     
-
     // up-casting
 
     A* ptr1 = static_cast<A*>(new B()); // no error and correct usage because the derived class has the same type as base class (up-casting)

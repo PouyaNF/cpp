@@ -1,3 +1,17 @@
+/*
+
+This C++ code illustrates various aspects of casting, including upcasting, downcasting using dynamic_cast, 
+and the use of reinterpret_cast. Upcasting involves converting a derived class pointer or reference to a
+ base class pointer or reference. Downcasting, specifically with dynamic_cast, is demonstrated by attempting
+ to cast a base class pointer to a derived class pointer safely. The code highlights the importance of
+ polymorphism and virtual functions for successful downcasting. The dangers of reinterpret_cast are also discussed,
+ emphasizing its lack of type-checking and potential risks. 
+
+*/
+
+
+
+
 #include <iostream>
 
 /// upcasting: casting derived class pointer/reference to base class pointer/reference
