@@ -5,6 +5,10 @@ The benefits of using inline functions include potentially improved performance 
  ultimately up to the compiler, and the inline keyword is more of a suggestion than a 
  strict directive. Modern compilers are usually good at making these decisions based on 
  optimization settings and other factors.
+ 
+ * Not all functions should be declared as inline. Generally, functions with larger or complex bodies might not be good candidates for inlining.
+ * Modern compilers are often capable of automatically determining whether a function should be inlined, even without the inline keyword.
+ * Inline functions are typically defined in header files to ensure that the function's definition is available at the call site.
 
 */
 
