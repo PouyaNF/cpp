@@ -1,10 +1,10 @@
 /*
 Inline functions are often used for short, simple functions that are called frequently. 
 The benefits of using inline functions include potentially improved performance by reducing
- the overhead of function calls. Keep in mind that the decision to inline a function is 
- ultimately up to the compiler, and the inline keyword is more of a suggestion than a 
- strict directive. Modern compilers are usually good at making these decisions based on 
- optimization settings and other factors.
+the overhead of function calls. Keep in mind that the decision to inline a function is 
+ultimately up to the compiler, and the inline keyword is more of a suggestion than a 
+strict directive. Modern compilers are usually good at making these decisions based on 
+optimization settings and other factors.
  
  * Not all functions should be declared as inline. Generally, functions with larger or complex bodies might not be good candidates for inlining.
  * Modern compilers are often capable of automatically determining whether a function should be inlined, even without the inline keyword.

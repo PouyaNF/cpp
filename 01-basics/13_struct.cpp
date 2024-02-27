@@ -1,5 +1,6 @@
 /*
-struct Is a user-defined data type that groups related data items of different data types together. 
+struct Is a user-defined data type that groups related data items of different data 
+// types together. 
 Like classes, structs can have member functions, constructors, and destructors.
  The main difference between struct and class is that the default access level for 
  members and inheritance is public in a struct, whereas it is private in a class.

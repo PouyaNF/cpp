@@ -1,7 +1,5 @@
 #include <iostream>
 
-
-
 // 1 - Return Values:
 // Functions can return a special value to indicate an error. 
 int divide(int a, int b) {

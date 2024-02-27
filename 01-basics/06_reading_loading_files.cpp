@@ -50,6 +50,7 @@ struct DataRecord {
     double value;
 };
 
+// reading and loading a binary file
 std::vector<DataRecord> readBinaryFile(const std::string& filename) {
     std::vector<DataRecord> records;
 
