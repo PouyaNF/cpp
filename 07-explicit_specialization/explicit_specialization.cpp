@@ -2,12 +2,13 @@
  * explicit specialization
  * 
  * it is a way of providing specialized implementations for specific data types where the default implementation
- * cannot handel them. 
+ * cannot handel them.
+ * This is useful for tailoring behavior for specific types without affecting the behavior of the generic template.
  * 
  */
 
 #include <iostream>
-
+// There is a template class Calc defined with a template parameter T.
 template<typename T>
 class Calc{
 
@@ -20,16 +21,20 @@ class Calc{
     T mult() {return m_x*m_y;}
 
     private:
+	//It has two private member variables m_x and m_y of type T.
     T m_x;
     T m_y;
 };
 
+// There is a Point2D struct defined, representing a 2D point with x and y coordinates.
 struct Point2D
 {
     float  x;
     float y;
 };
 
+// The template class Calc is explicitly specialized for the Point2D type.
+// In this specialization, Calc is tailored to handle Point2D instances differently than other types.
 template<>
 class Calc<Point2D>{
 
