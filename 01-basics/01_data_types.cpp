@@ -1,5 +1,6 @@
 #include <iostream>
-#include <limits>
+#include <climits> // for CHAR_MIN, CHAR_MAX, etc.
+#include <limits> // for std::numeric_limits
 
 int main() {
     std::cout << "Data Type\tSize (bytes)\tMinimum\t\t\tMaximum\n";
@@ -20,13 +21,13 @@ int main() {
     std::cout << "long long\t" << sizeof(long long) << "\t\t" << LLONG_MIN << "\t\t" << LLONG_MAX << std::endl;
 
     // float
-    std::cout << "float\t\t" << sizeof(float) << "\t\t" << std::numeric_limits<float>::lowest() << "\t\t\t" << std::numeric_limits<float>::max() << std::endl;
+    std::cout << "float\t\t" << sizeof(float) << "\t\t" << -std::numeric_limits<float>::max() << "\t\t\t" << std::numeric_limits<float>::max() << std::endl;
 
     // double
-    std::cout << "double\t\t" << sizeof(double) << "\t\t" << std::numeric_limits<double>::lowest() << "\t\t\t" << std::numeric_limits<double>::max() << std::endl;
+    std::cout << "double\t\t" << sizeof(double) << "\t\t" << -std::numeric_limits<double>::max() << "\t\t\t" << std::numeric_limits<double>::max() << std::endl;
 
     // long double
-    std::cout << "long double\t" << sizeof(long double) << "\t\t" << std::numeric_limits<long double>::lowest() << "\t\t\t" << std::numeric_limits<long double>::max() << std::endl;
+    std::cout << "long double\t" << sizeof(long double) << "\t\t" << -std::numeric_limits<long double>::max() << "\t\t\t" << std::numeric_limits<long double>::max() << std::endl;
 
     // bool
     std::cout << "bool\t\t" << sizeof(bool) << "\t\tN/A\t\t\tN/A\n";
