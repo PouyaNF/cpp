@@ -48,5 +48,11 @@ int main() {
 	std::cout<< *ptr4 << std::endl; // 10
 	
 	
+	// wild pointer 
+	int* ptr5; // Declaring a pointer without initializing it
+    *ptr5 = 10; // Dereferencing the uninitialized pointer
+	std::cout << *ptr5 << std::endl; // Accessing the value pointed to by the wild pointer
+
+	
 	return 0;
 }

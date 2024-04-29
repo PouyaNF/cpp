@@ -2,6 +2,15 @@
 #include <memory>
 #include <iostream>
 
+/*
+*  When an object has exclusive ownership, and there should be a single, unique owner.
+* It cannot be shared or copied, only moved.
+* Express clear ownership and responsibility for a resource.
+* It is more lightweight than std::shared_ptr since it doesn't need to maintain a reference count.
+* If performance is a critical concern and shared ownership is not required, prefer std::unique_ptr.
+*/
+
+
 class Rectangle {
     int length;
     int breadth; 

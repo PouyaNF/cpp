@@ -1,9 +1,6 @@
 // In C++, a Pair is a simple template class provided by the Standard Template Library (STL)
 //  to store a pair of values. It is defined in the <utility> header.
 
-
-
-
 #include <iostream>
 #include <utility> // for std::pair
 

@@ -37,6 +37,12 @@ void  doubleValue(int& val){
 
 
 
+int& doubleValueWithReturn(int &val) {
+	val *=2 ;
+	return val;
+}
+
+
 int main(){
 	
 	int var = 5;
@@ -60,6 +66,10 @@ int main(){
 	doubleValue( &num);
 	cout<< num <<endl; // 20 
 	
+	
+	int num2 = doubleValueWithReturn(num);
+	cout<< num <<endl; //  40 
+	cout<< num <<endl; //  40 
+	
 	return 0;
 }
-

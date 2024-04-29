@@ -22,8 +22,9 @@ int main() {
 
     // Checking for EOF (End of File) or an error
     if (ch == EOF) {
-        std::cout << "Error or End of File reached." << std::endl;
+        std::cout << "Error or End of File reached." << std::endl; 
     } else {
+		//Since getchar() returns an integer, we need to cast it to a char to display it correctly.
         std::cout << static_cast<char>(ch) << std::endl;
     }
 

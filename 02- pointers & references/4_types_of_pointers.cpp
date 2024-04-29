@@ -14,7 +14,9 @@ int main() {
     //In C++ the null pointers have a constant value of zero
 	
 	int *ptr1 = NULL; // or nullptr in modern c++ 
-	cout<< "The value of ptr1 (NULL pointer) is : "<< ptr1<<endl;; // The value of Null pointer is : 0
+	cout<< "The value of ptr1 (NULL pointer) is : "<< ptr1<<endl; // The value of Null pointer is : 0
+	// cour<<*ptr1<<endl; segmentation falt . NULL pointer cannot be dereferenced 
+	
 	
 	// Dangling pointers 
 	int* ptr2 = (int *) malloc(sizeof(int));
@@ -63,6 +65,10 @@ int main() {
 	*ptr6 = 10;
 	
 	
+	// wild pointer 
+	int* ptr7; // Declaring a pointer without initializing it
+    *ptr7 = 10; // Dereferencing the uninitialized pointer
+	std::cout << *ptr7 << std::endl; // Accessing the value pointed to by the wild pointer
 	
 	return 0; 
 }
@@ -79,7 +85,4 @@ int* getLocalptr(){
 int* getDynamicPtr(){
 	int* num = new int(10); //dynamic memory allocation in heap 
 	return num;
-	
-	
-	
 }

@@ -24,7 +24,7 @@ void readFileLineByLine(const std::string& filename) {
 }
 
 
-// Reading and Loading Text File
+// Reading text file and storing into a vector line by line 
 std::vector<std::string> readTextFile(const std::string& filename) {
     std::vector<std::string> lines;
 
@@ -44,7 +44,7 @@ std::vector<std::string> readTextFile(const std::string& filename) {
     return lines;
 }
 
-
+//data structure that mirrors the format of the binary data in the file
 struct DataRecord {
     int id;
     double value;
@@ -54,6 +54,8 @@ struct DataRecord {
 std::vector<DataRecord> readBinaryFile(const std::string& filename) {
     std::vector<DataRecord> records;
 
+	//std::ios::binary: This mode is typically used when reading binary data from a file, 
+	//as it ensures that the data is read as is without any interpretation.
     std::ifstream inputFile(filename, std::ios::binary);
     
     if (!inputFile.is_open()) {
@@ -72,6 +74,7 @@ std::vector<DataRecord> readBinaryFile(const std::string& filename) {
 		//to convert between different pointer types.
         inputFile.read(reinterpret_cast<char*>(&record), sizeof(DataRecord));
 
+		// inputFile.gcount() : the num of characters read 
         if (inputFile.gcount() == sizeof(DataRecord)) {
             records.push_back(record);
         }
@@ -108,3 +111,14 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+std::ifstream inputFile(filename, std::ios::binary); 
+(inputFile.gcount() == sizeof(DataRecord)) {
+            records.push_back(record);
+        }
+
